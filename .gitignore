@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Data files
+/data/
+
+# Test output
+*.log
+*.out
+*.test
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python egg metadata
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment variables and config secrets
+.env
+.env.*
+
+# FAISS index files
+*.faiss
+
+# PDF and processed chunk files
+*.pdf
+*.txt
+*.json
+
+# Misc
+*.bak
+*.swp 
