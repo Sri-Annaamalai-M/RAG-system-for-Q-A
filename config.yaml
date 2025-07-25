@@ -6,7 +6,7 @@ data:
 models:
   embedding_model: sentence-transformers/all-MiniLM-L6-v2
   generator_model: gemini-2.0-flash
-  gemini_api_key: AIzaSyAN0llABxSP0dGM6zjA9qE8KpiN-QO1QnI  # Replace with your Gemini API key or use env variable
+  gemini_api_key:   # Set via .env file or environment variable
 retriever:
   top_k: 5
   faiss_index: data/processed/embeddings/index.faiss

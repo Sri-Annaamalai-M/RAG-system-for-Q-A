@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import os
 import yaml
 import google.generativeai as genai
@@ -7,9 +9,9 @@ class Generator:
         with open(config_path, 'r') as f:
             self.config = yaml.safe_load(f)
         # Configure Gemini API
-        api_key = self.config['models'].get('gemini_api_key') or os.getenv('GOOGLE_API_KEY')
+        api_key = os.getenv('GOOGLE_API_KEY') or self.config['models'].get('gemini_api_key')
         if not api_key:
-            raise ValueError("Gemini API key not found in config.yaml or GOOGLE_API_KEY environment variable")
+            raise ValueError("Gemini API key not found in .env file, environment variable, or config.yaml")
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(self.config['models']['generator_model'])
         
